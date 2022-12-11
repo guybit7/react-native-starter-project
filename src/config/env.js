@@ -1,0 +1,1 @@
+export const API_ENDPOINT_URL = 'https://10.97.7.116:8000';

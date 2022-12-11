@@ -1,0 +1,23 @@
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">10.0.2.2</domain>
+        <domain includeSubdomains="true">172.29.160.1</domain>
+
+        <base-config cleartextTrafficPermitted="true">
+            <trust-anchors>
+                <certificates src="system" />
+            </trust-anchors>
+        </base-config>
+
+        <trust-anchors>
+            <certificates src="@raw/leafcertificate" />
+        </trust-anchors>
+    </domain-config>
+
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="@raw/leafcertificate" />
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>
